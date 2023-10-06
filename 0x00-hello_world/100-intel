@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Set the C file name
+CFILE="main.c"
+
+# Generate the assembly code
+gcc -S -masm=intel $CFILE
+
+# Rename the output file
+mv ${CFILE%.*}.s ${CFILE%.*}.s
+
