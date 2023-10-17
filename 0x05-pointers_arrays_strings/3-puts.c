@@ -3,13 +3,14 @@
 /**
  * _puts - prints a string, followed by a new line, to stdout
  * @str: string to print
+ * Return: 0
  */
 
-void _putchar(char *str)
+void _puts(char *str)
 {
-	while (*str != '\0')
-	{
-	_putchar(*str++);
-	}
+	int m;
+
+	for (m = 0 ; str[m] != '\0' ; m++)
+	_putchar(str[m]);
 	_putchar('\n');
 }
