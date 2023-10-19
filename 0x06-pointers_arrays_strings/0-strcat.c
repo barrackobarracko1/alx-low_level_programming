@@ -2,12 +2,12 @@
 
 /**
  * _strcat - function that concatenates two strings.
- * @dest - input value
- * @src - input value
- * Return: void
+ * @dest - pointer to destination string
+ * @src - pointer to source string
+ * Return: pointer to resulting string dest
  */
 
-char *_strcat(char *dest, char *src)
+char *strcat(char *dest, char *src)
 {
 	int m;
 	int c;
