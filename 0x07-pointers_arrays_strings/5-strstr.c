@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stddef.h>
 
 /**
  * _strstr - This locates a substring.
@@ -11,23 +12,21 @@
 
 char *_strstr(char *haystack, char *needle)
 {
-	int index;
+	int f, j;
 
-	if (*needle == 0)
-	return (haystack);
-	while (*haystack)
+	for (f = 0; haystack[f] != '\0'; f++)
 	{
-	index = 0;
-	if (haystack[index] == needle[index])
+	for (j = 0; needle[j] != '\0'; j++)
 	{
-	do {
-	if (needle[index + 1] == '\0')
-	return (haystack);
-	index++;
+	if (haystack[f + j] != needle[j])
+	{
+	break;
 	}
-	while (haystack[index] == needle[index]);
 	}
-	haystack++;
+	while (needle[j] == '\0')
+	{
+	return (&haystack[f]);
 	}
-	return ('\0');
+	}
+	return (NULL);
 }
