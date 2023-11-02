@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 #include "main.h"
 
 /**
@@ -11,65 +10,48 @@
 int _atoi(char *s)
 
 {
+	int e, v, g, asb, q, index;
 
-	int i, d, n, len, f, digit;
+	e = 0;
+	v = 0;
+	g = 0;
+	asb = 0;
+	q = 0;
+	index = 0;
 
-	i = 0;
-	d = 0;
-	n = 0;
-	len = 0;
-	f = 0;
-	digit = 0;
+	while (s[asb] != '\0')
 
+	asb++;
+	while (e < asb && q == 0)
+	{
+	if (s[e] == '-')
 
-	while (s[len] != '\0')
-
-	len++;
-
-	while (i < len && f == 0)
+	v++;
+	if (s[e] >= '0' && s[e] <= '9')
 
 	{
+	index = s[e] - '0';
+	if (v % 2)
 
-	if (s[i] == '-')
-
-	++d;
-	if (s[i] >= '0' && s[i] <= '9')
-
-	{
-
-	digit = s[i] - '0';
-
-	if (d % 2)
-
-	digit = -digit;
-	n = n * 10 + digit;
-
-	f = 1;
-
-	if (s[i + 1] < '0' || s[i + 1] > '9')
-
+	index = -index;
+	g = g * 10 + index;
+	q = 1;
+	if (s[e + 1] < '0' || s[e + 1] > '9')
 	break;
-	f = 0;
-
+	q = 0;
 	}
-
-	i++;
-
+	e++;
 	}
-
-
-	if (f == 0)
-
+	if (q == 0)
 	return (0);
-
-	return (n);
+	return (g);
 }
 
 /**
- * main - multiplies two numbers
- * @argc: number of arguments
- * @argv: array of arguments
- * Return: 0 (Success), 1 (Error)
+ * main -function that multiplies two numbers
+ * @argc: the number of arguments
+ * @argv: the array of arguments
+ * Return: 0 when successful, 1 when error
  */
 
 int main(int argc, char *argv[])
