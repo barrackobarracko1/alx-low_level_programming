@@ -1,66 +1,67 @@
 #include "3-calc.h"
-int op_add(int s, int k);
-int op_sub(int s, int k);
-int op_mul(int s, int k);
-int op_div(int s, int k);
-int op_mod(int s, int k);
+
+int op_add(int a, int b);
+int op_sub(int a, int b);
+int op_mul(int a, int b);
+int op_div(int a, int b);
+int op_mod(int a, int b);
 
 /**
 * op_add - Returns the sum of two numbers.
-* @s: The first number.
-* @k: The second number.
-* Return: The sum of s and k.
+* @a: The first number.
+* @b: The second number.
+* Return: The sum of a and b.
 */
 
-int op_add(int s, int k)
+int op_add(int a, int b)
 {
-	return (s + k);
+	return (a + b);
 }
 
 /**
 * op_sub - Returns the difference of two numbers.
-* @s: The first number.
-* @k: The second number.
-* Return: The difference of s and k.
+* @a: The first number.
+* @b: The second number.
+* Return: The difference of a and b.
 */
 
-int op_sub(int s, int k)
+int op_sub(int a, int b)
 {
-	return (s - k);
+	return (a - b);
 }
 
 /**
 * op_mul - Returns the product of two numbers.
-* @s: The first number.
-* @k: The second number.
-* Return: The product of s and k.
+* @a: The first number.
+* @b: The second number.
+* Return: The product of a and b.
 */
 
-int op_mul(int s, int k)
+int op_mul(int a, int b)
 {
-	return (s * k);
+	return (a * b);
 }
 
 /**
 * op_div - Returns the division of two numbers.
-* @s: The first number.
-* @k: The second number.
-* Return: The quotient of s and k.
+* @a: The first number.
+* @b: The second number.
+* Return: The quotient of a and b.
 */
 
-int op_div(int s, int k)
+int op_div(int a, int b)
 {
-	return (s / k);
+	return (a / b);
 }
 
 /**
-* op_mod - Returns the remainder of the division of two numbers.
-* @s: The first number.
-* @k: The second number.
-* Return: The remainder of the division of s by k.
+* op_mod - function which returns the remainder of division of two numbers.
+* @a: The first number.
+* @b: The second number.
+* Return: The remainder of the division of a by b.
 */
 
-int op_mod(int s, int k)
+int op_mod(int a, int b)
 {
-	return (s % k);
+	return (a % b);
 }
