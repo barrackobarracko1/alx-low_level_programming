@@ -4,13 +4,13 @@
 /**
 * struct op - A struct op.
 * @op: The operator.
-* @e: The associated function.
+* @f: The associated function.
 */
 
 typedef struct op
 {
 	char *op;
-	int (*e)(int a, int b);
+	int (*f)(int a, int b);
 	} op_t;
 
 	int op_add(int a, int b);
