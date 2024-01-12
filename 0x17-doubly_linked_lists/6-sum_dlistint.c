@@ -1,17 +1,16 @@
 #include "lists.h"
 
 /**
-* sum_dlistint - this returns the sum of all the data (n) of
-* the doubly linked lists
-* @head: the list head
-* @Return: the sum of data
-*/
+ * sum_dlistint - this returns the sum of all the data (n)
+ * of the doubly linked lists
+ *
+ * @head: the list head
+ * @Return: the sum of data
+ */
 
 int sum_dlistint(dlistint_t *head)
 {
-	int sum;
-
-	sum = 0;
+	int sum = 0;
 
 	if (head != NULL)
 	{
