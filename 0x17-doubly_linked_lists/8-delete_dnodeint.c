@@ -6,8 +6,9 @@
  * @head: pointer to the head of the dlistint_t.
  * @index: index of the node to delete.
  *
- * Return: when successful - 1, or -1 when it fails
+ * Return: when successful 1, or -1 when it fails
  */
+
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
 	dlistint_t *tmp = *head;
